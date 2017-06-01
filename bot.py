@@ -13,6 +13,7 @@ def start_bot(bot, update):
     hello_text = """Привет, милый {}! Я тут!
 Как дела?
     """.format(update.message.chat.first_name)
+    logging.info('{} /start'.format(update.message.chat.username))
     update.message.reply_text(hello_text)
 
 def chat(bot, update):
